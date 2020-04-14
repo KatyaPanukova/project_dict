@@ -27,11 +27,14 @@ with open('input.txt') as file_in:
     dict_dop_info = list_1[0]
 
 print(lc.FILM1)
+
 film_one = str(input())
 while film_one not in dict_actor:
     print(lc.ERROR_1)
     film_one = str(input())
+
 print(lc.FILM2)
+
 film_two = str(input())
 while film_two not in dict_actor:
     print(lc.ERROR_1)
