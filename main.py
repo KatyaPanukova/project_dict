@@ -147,8 +147,17 @@ if k == '1':
         print(lc.END)
 
 if k == '2':
+    print(lc.ACTOR1)
     actor_one = str(input())
+    while ' ' + actor_one not in dict_actor.values():
+        print(lc.ERROR_2)
+        actor_one = str(input())
+
+    print(lc.ACTOR2)
     actor_two = str(input())
+    while ' ' + actor_two not in dict_actor.values():
+        print(lc.ERROR_2)
+        actor_two = str(input())
 
     film_for_one = []
     film_for_two = []
@@ -192,5 +201,3 @@ if k == '2':
             print(k, end='')
         print(' ')
         print(lc.END)
-
-
