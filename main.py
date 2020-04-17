@@ -10,7 +10,7 @@ dict_1 = {}
 dict_2 = {}
 
 print(lc.HELLO)
-
+print(lc.HELLO2)
 
 with open('input.txt') as file_in:
     lines = file_in.readlines()
@@ -32,7 +32,8 @@ with open('input.txt') as file_in:
     k = str(input())
 
 if k == '1':
-    print(lc.HELLO2)
+
+    print(lc.MENU2)
     print(lc.FILM1)
 
     film_one = str(input())
