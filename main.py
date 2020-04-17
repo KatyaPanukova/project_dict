@@ -2,6 +2,8 @@
     Dictionary
     Panukova E.
 """
+
+
 import local as lc
 
 list_1 = []
@@ -29,10 +31,13 @@ with open('input.txt') as file_in:
     dict_actor = list_2[0]
     dict_dop_info = list_1[0]
 
+    new_dict_names = set()
+    for i in dict_actor.values():
+        new_dict_names.update(i)
+
     k = str(input())
 
 if k == '1':
-
     print(lc.MENU2)
     print(lc.FILM1)
 
@@ -150,14 +155,15 @@ if k == '1':
 
 if k == '2':
     print(lc.ACTOR1)
+
     actor_one = str(input())
-    while ' ' + actor_one not in dict_actor.values():
+    while ' ' + actor_one not in new_dict_names:
         print(lc.ERROR_2)
         actor_one = str(input())
 
     print(lc.ACTOR2)
     actor_two = str(input())
-    while ' ' + actor_two not in dict_actor.values():
+    while ' ' + actor_two not in new_dict_names:
         print(lc.ERROR_2)
         actor_two = str(input())
 
